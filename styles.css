@@ -1,0 +1,25 @@
+
+:root{--bg:#f7efe6;--card:#fff;--accent:#6b4f2f;--muted:#7a6c68;--primary:#d84315;--container:1100px}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Segoe UI,Roboto,sans-serif;background:var(--bg);color:#222}
+.container{max-width:var(--container);margin:0 auto;padding:20px}
+.site-header{position:sticky;top:0;background:#fff;padding:8px 0;box-shadow:0 2px 6px rgba(0,0,0,0.05);z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:68px;height:68px;border-radius:10px;object-fit:cover}
+.brand-text h1{margin:0;font-size:18px;color:var(--accent)}.brand-text p{margin:0;color:var(--muted);font-size:13px}
+.nav{display:flex;gap:8px;align-items:center}.nav a{padding:8px 10px;text-decoration:none;color:#333;border-radius:8px}
+.header-actions{display:flex;gap:8px}.cta{background:var(--primary);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+.whatsapp{background:#25D366;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+.hero{padding:36px 0}.hero-inner{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.hero-text h2{margin:0;font-size:30px;color:var(--accent)}.hero-image img{width:200px;height:200px;border-radius:12px}
+.products{padding:28px 0}.section-head{display:flex;justify-content:space-between;align-items:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.05);text-align:center}
+.card img{width:160px;height:140px;object-fit:cover;border-radius:10px}.card h4{margin:8px 0;color:var(--accent)}
+.card .price{font-weight:700;color:var(--primary);margin-top:6px}.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:#333}
+.contact-grid{display:grid;grid-template-columns:1fr 300px;gap:18px}.contact form{display:flex;flex-direction:column;gap:8px;background:var(--card);padding:12px;border-radius:10px}
+.contact input,.contact textarea{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+.site-footer{padding:18px 0;background:#efe7da;margin-top:20px}
+.logo-small{width:52px;height:52px;border-radius:8px}
+@media(max-width:800px){.header-inner{flex-direction:column;align-items:flex-start}.contact-grid{grid-template-columns:1fr}.hero-image img{width:150px;height:150px}}

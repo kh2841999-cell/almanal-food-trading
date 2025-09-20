@@ -1,262 +1,121 @@
-
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>مؤسسة المنال - Al Manal Food Trading</title>
-  <meta name="description" content="مؤسسة المنال لتجارة المواد الغذائية - منتجات غذائية طازجة وعالية الجودة. / Al Manal Food Trading - Quality food products." />
-  <style>
-    :root{
-      --green: #2f7a4f;
-      --brown: #8b5e3c;
-      --cream: #faf5ee;
-      --muted: #6b6b6b;
-      --accent: #c9d6c8;
-      --max-width: 1200px;
-      --radius: 12px;
-      --glass: rgba(255,255,255,0.6);
-    }
-    *{box-sizing:border-box}
-    body{font-family: 'Segoe UI', Tahoma, Arial, sans-serif;margin:0;background:linear-gradient(180deg,var(--cream),#fff);color:#222}
-    .container{max-width:var(--max-width);margin:0 auto;padding:20px}
-
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--green),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
-    .brand h1{margin:0;font-size:18px}
-    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted)}
-    nav a.cta{background:var(--green);color:#fff}
-
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;margin:18px 0}
-    .hero-card{background:var(--glass);padding:24px;border-radius:var(--radius);backdrop-filter:blur(6px)}
-    .hero h2{margin:0 0 8px 0;font-size:28px}
-    .hero p{color:var(--muted);margin:0 0 16px}
-    .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer}
-    .btn.primary{background:var(--green);color:#fff}
-    .btn.ghost{background:transparent;border:1px solid var(--green);color:var(--green)}
-
-    .section{margin:28px 0}
-    .section h3{margin-bottom:12px}
-    .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
-    .product{background:#fff;border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    .product img{width:100%;height:140px;object-fit:cover;border-radius:8px}
-    .product h4{margin:8px 0 4px 0}
-    .price{color:var(--brown);font-weight:700}
-
-    .about{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-    .about img{width:240px;border-radius:12px}
-
-    .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .form-control{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
-    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6e6e6}
-    textarea{min-height:120px}
-
-    footer{margin-top:28px;padding:18px 0;color:var(--muted);border-top:1px solid #eee}
-
-    .lang{display:flex;gap:6px;align-items:center}
-    .lang button{background:transparent;border:1px solid #ddd;padding:6px 8px;border-radius:8px;cursor:pointer}
-
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .hero img{width:100%}
-      .contact .grid{grid-template-columns:1fr}
-    }
-
-    .muted{color:var(--muted)}
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مؤسسة المنال - AL MANAL FOOD TRADING</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="مؤسسة المنال لتجارة المواد الغذائية - توريد بالجملة للمحلات والسوبرماركت. تواصل لطلب عروض أسعار.">
 </head>
 <body>
-  <div class="container">
-    <header>
+  <header class="site-header">
+    <div class="container header-inner">
       <div class="brand">
-        <div class="logo">المنال</div>
-        <div>
-          <h1 data-lang="ar">مؤسسة المنال لتجارة المواد الغذائية</h1>
-          <h1 data-lang="en" style="display:none">Al Manal Food Trading</h1>
+        <img src="assets/logo.jpg" alt="شعار المؤسسة" class="logo">
+        <div class="brand-text">
+          <h1>مؤسسة المنال</h1>
+          <p>لتجارة المواد الغذائية - AL MANAL FOOD TRADING</p>
         </div>
       </div>
-      <nav>
-        <a href="#home" data-lang="ar">الرئيسية</a>
-        <a href="#about" data-lang="ar">من نحن</a>
-        <a href="#products" data-lang="ar">المنتجات</a>
-        <a href="#contact" class="cta" data-lang="ar">تواصل معنا</a>
-
-        <a href="#home" data-lang="en" style="display:none">Home</a>
-        <a href="#about" data-lang="en" style="display:none">About</a>
-        <a href="#products" data-lang="en" style="display:none">Products</a>
-        <a href="#contact" class="cta" data-lang="en" style="display:none">Contact</a>
-
-        <div class="lang">
-          <button id="lang-ar">عربي</button>
-          <button id="lang-en">EN</button>
-        </div>
+      <nav class="nav" aria-label="القائمة الرئيسية">
+        <a href="#home">الصفحة الرئيسية</a>
+        <a href="#products">المنتجات</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل</a>
       </nav>
-    </header>
-
-    <main>
-      <section id="home" class="hero">
-        <div class="hero-card">
-          <h2 data-lang="ar">جودة، ثقة، ومنتجات طازجة</h2>
-          <h2 data-lang="en" style="display:none">Quality, Trust, Fresh Products</h2>
-          <p data-lang="ar" class="muted">نقدم أفضل المواد الغذائية لإحتياجاتك اليومية والتجارية.</p>
-          <p data-lang="en" style="display:none" class="muted">We supply top-quality food products for your daily and commercial needs.</p>
-
-          <div class="actions">
-            <button class="btn primary" id="view-products" data-lang="ar">عرض المنتجات</button>
-            <button class="btn ghost" onclick="document.getElementById('contact').scrollIntoView();" data-lang="ar">تواصل الآن</button>
-
-            <button class="btn primary" id="view-products-en" style="display:none" data-lang="en">View Products</button>
-            <button class="btn ghost" id="contact-en" style="display:none" data-lang="en">Contact Us</button>
-          </div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop" alt="hero" style="width:100%;border-radius:12px;object-fit:cover">
-      </section>
-
-      <section id="about" class="section">
-        <h3 data-lang="ar">من نحن</h3>
-        <h3 data-lang="en" style="display:none">About Us</h3>
-        <div class="about">
-          <div>
-            <p data-lang="ar" class="muted">مؤسسة المنال لتجارة المواد الغذائية تعمل في توريد وتوزيع المواد الغذائية عالية الجودة منذ سنوات، نلتزم بمعايير السلامة والجودة لنضمن لعملائنا أفضل تجربة.</p>
-            <p data-lang="en" style="display:none" class="muted">Al Manal Food Trading supplies and distributes high-quality food products. We adhere to safety and quality standards to ensure the best experience for our clients.</p>
-          </div>
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop" alt="about image">
-        </div>
-      </section>
-
-      <section id="products" class="section">
-        <h3 data-lang="ar">منتجاتنا</h3>
-        <h3 data-lang="en" style="display:none">Our Products</h3>
-        <p data-lang="ar" class="muted">أقسام مؤقتة — يمكن تعديلها وإضافة منتجات وصور لاحقًا.</p>
-        <p data-lang="en" style="display:none" class="muted">Temporary categories — editable, add products and images later.</p>
-
-        <div class="products" aria-live="polite">
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1585238342020-99b5f2a9a6b1?q=80&w=800&auto=format&fit=crop" alt="زيوت">
-            <h4 data-lang="ar">الزيوت</h4>
-            <h4 data-lang="en" style="display:none">Oils</h4>
-            <p class="price">EGP 00.00</p>
-          </article>
-
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop" alt="حبوب">
-            <h4 data-lang="ar">الحبوب</h4>
-            <h4 data-lang="en" style="display:none">Grains</h4>
-            <p class="price">EGP 00.00</p>
-          </article>
-
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1604908177522-900b1389f9e4?q=80&w=800&auto=format&fit=crop" alt="معلبات">
-            <h4 data-lang="ar">المعلبات</h4>
-            <h4 data-lang="en" style="display:none">Canned Goods</h4>
-            <p class="price">EGP 00.00</p>
-          </article>
-
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" alt="ألبان">
-            <h4 data-lang="ar">منتجات الألبان</h4>
-            <h4 data-lang="en" style="display:none">Dairy Products</h4>
-            <p class="price">EGP 00.00</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <h3 data-lang="ar">تواصل معنا</h3>
-        <h3 data-lang="en" style="display:none">Contact Us</h3>
-        <div class="grid">
-          <form id="contactForm" onsubmit="submitForm(event)">
-            <div class="form-control">
-              <label data-lang="ar">الاسم</label>
-              <label data-lang="en" style="display:none">Name</label>
-              <input type="text" id="name" required />
-            </div>
-            <div class="form-control">
-              <label data-lang="ar">البريد الإلكتروني</label>
-              <label data-lang="en" style="display:none">Email</label>
-              <input type="email" id="email" required />
-            </div>
-            <div class="form-control">
-              <label data-lang="ar">الرسالة</label>
-              <label data-lang="en" style="display:none">Message</label>
-              <textarea id="message" required></textarea>
-            </div>
-            <button type="submit" class="btn primary" data-lang="ar">إرسال</button>
-            <button type="submit" class="btn primary" data-lang="en" style="display:none">Send</button>
-          </form>
-
-          <div>
-            <p><strong data-lang="ar">الهاتف:</strong> <span class="muted">010-XXXX-XXXX</span></p>
-            <p><strong data-lang="ar">البريد:</strong> <span class="muted">you@domain.com</span></p>
-            <p><strong data-lang="ar">العنوان:</strong> <span class="muted">القاهرة، مصر</span></p>
-
-            <p data-lang="en" style="display:none"><strong>Phone:</strong> <span class="muted">010-XXXX-XXXX</span></p>
-            <p data-lang="en" style="display:none"><strong>Email:</strong> <span class="muted">you@domain.com</span></p>
-            <p data-lang="en" style="display:none"><strong>Address:</strong> <span class="muted">Cairo, Egypt</span></p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div>
-          <strong data-lang="ar">مؤسسة المنال</strong>
-          <span class="muted" data-lang="ar"> - كافة الحقوق محفوظة © 2025</span>
-
-          <strong data-lang="en" style="display:none">Al Manal</strong>
-          <span class="muted" data-lang="en" style="display:none"> - All rights reserved © 2025</span>
-        </div>
-        <div class="muted">تم تصميم الموقع كنموذج مبدئي ومرن للتعديل</div>
+      <div class="header-actions">
+        <a class="cta" href="mailto:info@almanal.example?subject=طلب%20عرض%20سعر">اطلب عرض سعر</a>
+        <a class="whatsapp" href="https://wa.me/2001067280600?text=مرحبا%20مؤسسة%20المنال%20أرغب%20بالحصول%20على%20عرض%20سعر" target="_blank" rel="noopener">واتساب</a>
       </div>
-    </footer>
-  </div>
+    </div>
+  </header>
 
-  <script>
-    const langArBtn = document.getElementById('lang-ar');
-    const langEnBtn = document.getElementById('lang-en');
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>أفضل تشكيلة من المواد الغذائية بالجملة</h2>
+          <p>توريد المواد التموينية، السناكس، المعلبات والمشروبات للمحلات والسوبرماركت. جودة ثابتة وخدمات لوجستية موثوقة.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#products">تصفح المنتجات</a>
+            <a class="btn ghost" href="#contact">تواصل معنا</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/logo.jpg" alt="لوغو المؤسسة">
+        </div>
+      </div>
+    </section>
 
-    function setLang(lang){
-      document.documentElement.lang = (lang === 'en') ? 'en' : 'ar';
-      document.documentElement.dir = (lang === 'en') ? 'ltr' : 'rtl';
-      const els = document.querySelectorAll('[data-lang]');
-      els.forEach(el => {
-        if(el.getAttribute('data-lang') === lang){
-          el.style.display = '';
-        } else {
-          el.style.display = 'none';
-        }
-      });
-    }
+    <section id="products" class="products">
+      <div class="container">
+        <div class="section-head">
+          <h3>منتجاتنا</h3>
+          <div class="tools">
+            <a href="products.csv" download>تحميل كتالوج (CSV)</a>
+            <a href="admin.html">لوحة إدارة (محلية)</a>
+          </div>
+        </div>
+        <p class="lead">مجموعة واسعة من المعلبات، السناكس، والمشروبات.</p>
+        <div id="gallery" class="grid"></div>
+      </div>
+    </section>
 
-    langArBtn.addEventListener('click', () => setLang('ar'));
-    langEnBtn.addEventListener('click', () => setLang('en'));
-    setLang('ar');
+    <section id="about" class="about">
+      <div class="container">
+        <h3>من نحن</h3>
+        <p>مؤسسة المنال متخصصة في توزيع المواد الغذائية محلياً. لدينا خبرة في التعامل مع سلاسل التوريد وتقديم عروض تنافسية للمشترين بالجملة.</p>
+      </div>
+    </section>
 
-    document.getElementById('view-products').addEventListener('click', ()=>{
-      document.getElementById('products').scrollIntoView({behavior:'smooth'});
-    });
-    document.getElementById('view-products-en').addEventListener('click', ()=>{
-      document.getElementById('products').scrollIntoView({behavior:'smooth'});
-    });
+    <section id="contact" class="contact">
+      <div class="container">
+        <h3>تواصل معنا</h3>
+        <div class="contact-grid">
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <label>الاسم</label>
+            <input type="text" id="name" required>
+            <label>الهاتف أو البريد</label>
+            <input type="text" id="phone" required>
+            <label>المنتج / طلبك</label>
+            <input type="text" id="subject">
+            <label>رسالتك</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit">إرسال عبر البريد</button>
+            <button type="button" onclick="sendWhatsApp()">إرسال عبر واتساب</button>
+          </form>
+          <div class="contact-info">
+            <h4>معلومات التواصل</h4>
+            <p>العنوان: القاهرة، مصر</p>
+            <p>هاتف: +20 01067280600</p>
+            <p>البريد الإلكتروني: info@almanal.example</p>
+            <h4>ساعات العمل</h4>
+            <p>الاثنين - السبت: 9 صباحًا - 6 مساءً</p>
+            <h4>ملفات الموقع</h4>
+            <p><a href="README.txt" download>تعليمات النشر وREADME</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    function submitForm(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if(!name || !email || !message){
-        alert('الرجاء ملء الحقول المطلوبة');
-        return;
-      }
-      const mail = 'you@domain.com';
-      const subject = encodeURIComponent('رسالة من موقع مؤسسة المنال');
-      const body = encodeURIComponent('الاسم: ' + name + '\nالبريد: ' + email + '\n\n' + message);
-      window.location.href = `mailto:${mail}?subject=${subject}&body=${body}`;
-    }
-  </script>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        <img src="assets/logo.jpg" alt="logo small" class="logo-small">
+        <p>© 2025 مؤسسة المنال - جميع الحقوق محفوظة</p>
+      </div>
+      <div class="footer-right">
+        <p>تابعنا</p>
+        <div class="socials">
+          <a href="#" aria-label="facebook">فيسبوك</a>
+          <a href="#" aria-label="instagram">انستجرام</a>
+          <a href="#" aria-label="whatsapp">واتساب</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
