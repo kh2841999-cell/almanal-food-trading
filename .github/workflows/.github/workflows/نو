@@ -1,0 +1,68 @@
+name: Download Food Products
+
+on:
+  workflow_dispatch: # تقدر تشغله يدوي من Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        run: |
+          python <<EOF
+          import os, requests, csv
+
+          PEXELS_API_KEY = "${{ secrets.PEXELS_API_KEY }}"
+          QUERY = "food product"
+          NUM_PHOTOS = 30
+          SAVE_DIR = "assets"
+          CSV_FILE = "products.csv"
+
+          headers = {"Authorization": PEXELS_API_KEY}
+          url = f"https://api.pexels.com/v1/search?query={QUERY}&per_page={NUM_PHOTOS}"
+
+          os.makedirs(SAVE_DIR, exist_ok=True)
+          response = requests.get(url, headers=headers)
+          data = response.json()
+
+          image_files = []
+          for i, photo in enumerate(data["photos"], start=1):
+              img_url = photo["src"]["medium"]
+              img_data = requests.get(img_url).content
+              filename = os.path.join(SAVE_DIR, f"product_{i}.jpg")
+              with open(filename, "wb") as f:
+                  f.write(img_data)
+              image_files.append(f"{SAVE_DIR}/product_{i}.jpg")
+
+          with open(CSV_FILE, "w", newline="", encoding="utf-8") as csvfile:
+              writer = csv.writer(csvfile)
+              writer.writerow(["id", "name", "price", "description", "img"])
+              for i, img_path in enumerate(image_files, start=1):
+                  writer.writerow([
+                      i,
+                      f"منتج غذائي {i}",
+                      f"{10 + i*2} جنيه",
+                      f"هذا وصف قصير للمنتج رقم {i}.",
+                      img_path
+                  ])
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Add food product images and products.csv"
+          git push
