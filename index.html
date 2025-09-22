@@ -1,38 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>مؤسسة المنال - AL MANAL FOOD TRADING</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مؤسسة المنال</title>
+  <meta name="description" content="إدارة المواد الغذائية - توريد بالجملة للمحلات والسوبرماركت، تواصل لطلب عروض أسعار.">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="مؤسسة المنال لتجارة المواد الغذائية - توريد بالجملة للمحلات والسوبرماركت. تواصل لطلب عروض أسعار.">
 </head>
 <body>
 
-  <!-- الهيدر -->
+  <!-- البانر -->
   <header style="display: flex; justify-content: flex-end; align-items: center; padding: 10px;">
-    <img src="assets/logo.png" alt="Al Manal Logo" style="height: 60px;">
-  </header>  
+    <img src="./logo.jpg" alt="Al Manal Logo" style="height: 60px;">
+  </header>
 
+  <!-- الهيدر -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="assets/logo.jpg" alt="شعار المؤسسة" class="logo">
+        <img src="./logo.jpg" alt="شعار المؤسسة" class="logo">
         <div class="brand-text">
           <h1>مؤسسة المنال</h1>
-          <p>لتجارة المواد الغذائية - AL MANAL FOOD TRADING</p>
+          <p>لإدارة المواد الغذائية - AL MANAL FOOD TRADING</p>
         </div>
       </div>
+
       <nav class="nav" aria-label="القائمة الرئيسية">
         <a href="#home">الصفحة الرئيسية</a>
         <a href="#products">المنتجات</a>
         <a href="#about">من نحن</a>
         <a href="#contact">تواصل</a>
       </nav>
+
       <div class="header-actions">
-        <a class="cta" href="mailto:almanalest776@gmail.com?subject=طلب%20عرض%20سعر">اطلب عرض سعر</a>
-        <a class="whatsapp" href="https://wa.me/201200120688?text=مرحبا%20مؤسسة%20المنال%20أرغب%20بالحصول%20على%20عرض%20سعر" target="_blank" rel="noopener">واتساب</a>
+        <a class="cta" href="mailto:almanalest776@gmail.com?subject=طلب%20عرض%20سعر">طلب عرض سعر</a>
+        <a class="whatsapp" href="https://wa.me/201200120688?text=طلب%20عرض%20سعر%20للمحل">واتساب</a>
       </div>
     </div>
   </header>
@@ -43,10 +46,11 @@
       <div class="section-head">
         <h3>منتجاتنا</h3>
       </div>
+
       <div class="grid">
         <!-- منتج 1 -->
         <div class="card">
-          <img src="assets/products/product1.jpg" alt="مسحوق غسيل">
+          <img src="./Product1.jpeg" alt="مسحوق غسيل">
           <h3>مسحوق غسيل</h3>
           <p class="price">25 جنيه</p>
           <button class="order-btn" onclick="orderNow('مسحوق غسيل')">اطلب الآن</button>
@@ -54,7 +58,7 @@
 
         <!-- منتج 2 -->
         <div class="card">
-          <img src="assets/products/product2.jpg" alt="زيت طعام">
+          <img src="./Product2.jpg" alt="زيت طعام">
           <h3>زيت طعام</h3>
           <p class="price">85 جنيه</p>
           <button class="order-btn" onclick="orderNow('زيت طعام')">اطلب الآن</button>
@@ -62,7 +66,7 @@
 
         <!-- منتج 3 -->
         <div class="card">
-          <img src="assets/products/product3.jpg" alt="مكرونة">
+          <img src="./Product3.jpg" alt="مكرونة">
           <h3>مكرونة</h3>
           <p class="price">12 جنيه</p>
           <button class="order-btn" onclick="orderNow('مكرونة')">اطلب الآن</button>
@@ -70,7 +74,7 @@
 
         <!-- منتج 4 -->
         <div class="card">
-          <img src="assets/products/product_rice.jpg" alt="أرز فاخر">
+          <img src="./product_rice.jpg" alt="أرز فاخر">
           <h3>أرز فاخر</h3>
           <p class="price">30 جنيه</p>
           <button class="order-btn" onclick="orderNow('أرز فاخر')">اطلب الآن</button>
@@ -78,7 +82,7 @@
 
         <!-- منتج 5 -->
         <div class="card">
-          <img src="assets/products/product_oil.jpg" alt="زيت خليط">
+          <img src="./product_oil.jpg" alt="زيت خليط">
           <h3>زيت خليط</h3>
           <p class="price">95 جنيه</p>
           <button class="order-btn" onclick="orderNow('زيت خليط')">اطلب الآن</button>
@@ -86,7 +90,7 @@
 
         <!-- منتج 6 -->
         <div class="card">
-          <img src="assets/products/product_cola.jpg" alt="مشروب غازي">
+          <img src="./product_cola.jpg" alt="مشروب غازي">
           <h3>مشروب غازي</h3>
           <p class="price">15 جنيه</p>
           <button class="order-btn" onclick="orderNow('مشروب غازي')">اطلب الآن</button>
@@ -94,15 +98,15 @@
 
         <!-- منتج 7 -->
         <div class="card">
-          <img src="assets/products/product_lays.jpg" alt="شيبسي لايز">
-          <h3>شيبسي لايز</h3>
+          <img src="./product_lays.jpg" alt="شيبسي ليز">
+          <h3>شيبسي ليز</h3>
           <p class="price">10 جنيه</p>
-          <button class="order-btn" onclick="orderNow('شيبسي لايز')">اطلب الآن</button>
+          <button class="order-btn" onclick="orderNow('شيبسي ليز')">اطلب الآن</button>
         </div>
 
         <!-- منتج 8 -->
         <div class="card">
-          <img src="assets/products/product_tuna.jpg" alt="تونة">
+          <img src="./product_tuna.jpg" alt="تونة">
           <h3>تونة</h3>
           <p class="price">28 جنيه</p>
           <button class="order-btn" onclick="orderNow('تونة')">اطلب الآن</button>
@@ -115,7 +119,9 @@
   <section id="about" class="about">
     <div class="container">
       <h3>من نحن</h3>
-      <p>مؤسسة المنال متخصصة في توزيع المواد الغذائية محلياً. لدينا خبرة في التعامل مع سلاسل التوريد وتقديم عروض تنافسية للمشترين بالجملة.</p>
+      <p>
+        متخصصة في توزيع المواد الغذائية محلياً، لدينا خبرة في التعامل مع سلاسل التوريد وتقديم عروض تنافسية للمشترين بالجملة.
+      </p>
     </div>
   </section>
 
@@ -129,20 +135,20 @@
           <input type="text" id="name" required>
           <label>الهاتف أو البريد</label>
           <input type="text" id="phone" required>
-          <label>المنتج / طلبك</label>
+          <label>المنتج</label>
           <input type="text" id="subject">
           <label>رسالتك</label>
           <textarea id="message" rows="4" required></textarea>
           <button type="submit">إرسال عبر البريد</button>
           <button type="button" onclick="sendWhatsApp()">إرسال عبر واتساب</button>
         </form>
+
         <div class="contact-info">
           <h4>معلومات التواصل</h4>
-          <p>العنوان: القاهرة، مصر</p>
-          <p><a href="tel:+201200120688">+20 1200120688</a></p> 
-          <p><a href="mailto:almanalest776@gmail.com">almanalest776@gmail.com</a></p>
+          <p>الهاتف: <a href="tel:+201200120688">+20 1200120688</a></p>
+          <p>البريد: <a href="mailto:almanalest776@gmail.com">almanalest776@gmail.com</a></p>
           <h4>ساعات العمل</h4>
-          <p>الاثنين - السبت: 9 صباحًا - 6 مساءً</p>
+          <p>الاثنين - السبت: 9 صباحاً - 6 مساءً</p>
         </div>
       </div>
     </div>
@@ -150,30 +156,8 @@
 
   <!-- الفوتر -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-left">
-        <img src="assets/logo.jpg" alt="logo small" class="logo-small">
-        <p>© 2025 مؤسسة المنال - جميع الحقوق محفوظة</p>
-      </div>
-      <div class="footer-right">
-        <p>تابعنا</p>
-        <div class="socials">
-          <a href="#" aria-label="facebook">فيسبوك</a>
-          <a href="#" aria-label="instagram">انستجرام</a>
-          <a href="#" aria-label="whatsapp">واتساب</a>
-        </div>
-      </div>
-    </div>
+    <p>جميع الحقوق محفوظة © مؤسسة المنال 2025</p>
   </footer>
-
-  <script>
-    function orderNow(productName) {
-      const phoneNumber = "+201200120688"; 
-      const message = `مرحبًا، أريد طلب منتج: ${productName}`;
-      const url = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank");
-    }
-  </script>
 
   <script src="app.js"></script>
 </body>
