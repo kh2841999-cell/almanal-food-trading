@@ -14,7 +14,7 @@ async function loadProducts(){
         <p>${p.desc}</p>
         <div class="price">${p.price} ${p.unit}</div>
         <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
-          <a class="btn" href="mailto:info@almanal.example?subject=طلب%20عرض%20سعر%20${encodeURIComponent(p.title)}">اطلب عرض</a>
+          <a class="btn" href="mailto:almanalest776@gmail.com?subject=طلب%20عرض%20سعر%20${encodeURIComponent(p.title)}">اطلب عرض</a>
           <button onclick="addToQuote('${p.title}')" style="padding:8px;border-radius:8px;border:none;background:#6b4f2f;color:#fff;cursor:pointer">أضف لمقارنة</button>
         </div>
       `;
@@ -31,7 +31,7 @@ function submitForm(e){
   const phone=document.getElementById('phone').value;
   const subject=document.getElementById('subject').value;
   const message=document.getElementById('message').value;
-  const mail = `mailto:info@almanal.example?subject=${encodeURIComponent(subject||'طلب')}%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(message+'\n\n'+phone)}`;
+  const mail = `mailto:almanalest776@gmail.com?subject=${encodeURIComponent(subject||'طلب')}%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(message+'\n\n'+phone)}`;
   window.location.href = mail;
 }
 function sendWhatsApp(){
@@ -40,6 +40,6 @@ function sendWhatsApp(){
   const subject=document.getElementById('subject').value||'';
   const message=document.getElementById('message').value||'';
   const text=encodeURIComponent(`مرحباً، اسمي ${name}. ${subject} ${message} - ${phone}`);
-  window.open('https://wa.me/2001067280600?text='+text, '_blank');
+  window.open('https://wa.me/2001200120868?text='+text, '_blank');
 }
 loadProducts();
