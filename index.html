@@ -41,80 +41,154 @@
   </header>
 
   <!-- قسم المنتجات -->
-  <section id="products" class="products">
-    <div class="container">
-      <div class="section-head">
-        <h3>منتجاتنا</h3>
+<section id="products" class="products">
+  <div class="container">
+    <div class="section-head">
+      <h3>منتجاتنا</h3>
+      <p>تشكيلة واسعة من المنتجات الغذائية بالجملة.</p>
+    </div>
+
+    <div class="grid">
+      <!-- أول صف -->
+      <div class="card">
+        <img src="./Product1.jpeg" alt="مسحوق غسيل">
+        <h3>مسحوق غسيل</h3>
+        <p class="price">25 جنيه</p>
+        <button class="order-btn" onclick="orderNow('مسحوق غسيل')">اطلب الآن</button>
       </div>
 
-      <div class="grid">
-        <!-- منتج 1 -->
-        <div class="card">
-          <img src="./Product1.jpeg" alt="مسحوق غسيل">
-          <h3>مسحوق غسيل</h3>
-          <p class="price">25 جنيه</p>
-          <button class="order-btn" onclick="orderNow('مسحوق غسيل')">اطلب الآن</button>
-        </div>
+      <div class="card">
+        <img src="./Product2.jpg" alt="زيت طعام">
+        <h3>زيت طعام</h3>
+        <p class="price">85 جنيه</p>
+        <button class="order-btn" onclick="orderNow('زيت طعام')">اطلب الآن</button>
+      </div>
 
-        <!-- منتج 2 -->
-        <div class="card">
-          <img src="./Product2.jpg" alt="زيت طعام">
-          <h3>زيت طعام</h3>
-          <p class="price">85 جنيه</p>
-          <button class="order-btn" onclick="orderNow('زيت طعام')">اطلب الآن</button>
-        </div>
+      <div class="card">
+        <img src="./Product3.jpg" alt="مكرونة">
+        <h3>مكرونة</h3>
+        <p class="price">12 جنيه</p>
+        <button class="order-btn" onclick="orderNow('مكرونة')">اطلب الآن</button>
+      </div>
 
-        <!-- منتج 3 -->
-        <div class="card">
-          <img src="./Product3.jpg" alt="مكرونة">
-          <h3>مكرونة</h3>
-          <p class="price">12 جنيه</p>
-          <button class="order-btn" onclick="orderNow('مكرونة')">اطلب الآن</button>
-        </div>
+      <div class="card">
+        <img src="./Product4.jpeg" alt="عدس">
+        <h3>عدس</h3>
+        <p class="price">35 جنيه</p>
+        <button class="order-btn" onclick="orderNow('عدس')">اطلب الآن</button>
+      </div>
 
-        <!-- منتج 4 -->
-        <div class="card">
-          <img src="./product_rice.jpg" alt="أرز فاخر">
-          <h3>أرز فاخر</h3>
-          <p class="price">30 جنيه</p>
-          <button class="order-btn" onclick="orderNow('أرز فاخر')">اطلب الآن</button>
-        </div>
+      <!-- الصف الثاني -->
+      <div class="card">
+        <img src="./Product5.jpeg" alt="فول">
+        <h3>فول</h3>
+        <p class="price">28 جنيه</p>
+        <button class="order-btn" onclick="orderNow('فول')">اطلب الآن</button>
+      </div>
 
-        <!-- منتج 5 -->
-        <div class="card">
-          <img src="./product_oil.jpg" alt="زيت خليط">
-          <h3>زيت خليط</h3>
-          <p class="price">95 جنيه</p>
-          <button class="order-btn" onclick="orderNow('زيت خليط')">اطلب الآن</button>
-        </div>
+      <div class="card">
+        <img src="./Product6.jpeg" alt="سكر">
+        <h3>سكر</h3>
+        <p class="price">20 جنيه</p>
+        <button class="order-btn" onclick="orderNow('سكر')">اطلب الآن</button>
+      </div>
 
-        <!-- منتج 6 -->
-        <div class="card">
-          <img src="./product_cola.jpg" alt="مشروب غازي">
-          <h3>مشروب غازي</h3>
-          <p class="price">15 جنيه</p>
-          <button class="order-btn" onclick="orderNow('مشروب غازي')">اطلب الآن</button>
-        </div>
+      <div class="card">
+        <img src="./Product7.jpeg" alt="ملح">
+        <h3>ملح</h3>
+        <p class="price">10 جنيه</p>
+        <button class="order-btn" onclick="orderNow('ملح')">اطلب الآن</button>
+      </div>
 
-        <!-- منتج 7 -->
-        <div class="card">
-          <img src="./product_lays.jpg" alt="شيبسي ليز">
-          <h3>شيبسي ليز</h3>
-          <p class="price">10 جنيه</p>
-          <button class="order-btn" onclick="orderNow('شيبسي ليز')">اطلب الآن</button>
-        </div>
+      <div class="card">
+        <img src="./Product8.jpeg" alt="خل">
+        <h3>خل</h3>
+        <p class="price">15 جنيه</p>
+        <button class="order-btn" onclick="orderNow('خل')">اطلب الآن</button>
+      </div>
 
-        <!-- منتج 8 -->
-        <div class="card">
-          <img src="./product_tuna.jpg" alt="تونة">
-          <h3>تونة</h3>
-          <p class="price">28 جنيه</p>
-          <button class="order-btn" onclick="orderNow('تونة')">اطلب الآن</button>
-        </div>
+      <!-- الصف الثالث -->
+      <div class="card">
+        <img src="./Product9.jpeg" alt="شاي">
+        <h3>شاي</h3>
+        <p class="price">40 جنيه</p>
+        <button class="order-btn" onclick="orderNow('شاي')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./Product10.jpeg" alt="قهوة">
+        <h3>قهوة</h3>
+        <p class="price">55 جنيه</p>
+        <button class="order-btn" onclick="orderNow('قهوة')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./Product11.jpeg" alt="لبن بودرة">
+        <h3>لبن بودرة</h3>
+        <p class="price">60 جنيه</p>
+        <button class="order-btn" onclick="orderNow('لبن بودرة')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./Product12.jpeg" alt="كاكاو">
+        <h3>كاكاو</h3>
+        <p class="price">25 جنيه</p>
+        <button class="order-btn" onclick="orderNow('كاكاو')">اطلب الآن</button>
+      </div>
+
+      <!-- الصف الرابع -->
+      <div class="card">
+        <img src="./Product13.jpeg" alt="شوكولاتة">
+        <h3>شوكولاتة</h3>
+        <p class="price">35 جنيه</p>
+        <button class="order-btn" onclick="orderNow('شوكولاتة')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./Product14.png" alt="دقيق فاخر">
+        <h3>دقيق فاخر</h3>
+        <p class="price">45 جنيه</p>
+        <button class="order-btn" onclick="orderNow('دقيق فاخر')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./product_rice.jpg" alt="أرز">
+        <h3>أرز</h3>
+        <p class="price">30 جنيه</p>
+        <button class="order-btn" onclick="orderNow('أرز')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./product_oil.jpg" alt="زيت خليط">
+        <h3>زيت خليط</h3>
+        <p class="price">95 جنيه</p>
+        <button class="order-btn" onclick="orderNow('زيت خليط')">اطلب الآن</button>
+      </div>
+
+      <!-- الصف الخامس -->
+      <div class="card">
+        <img src="./product_cola.jpg" alt="مشروب غازي">
+        <h3>مشروب غازي</h3>
+        <p class="price">15 جنيه</p>
+        <button class="order-btn" onclick="orderNow('مشروب غازي')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./product_lays.jpg" alt="شيبسي">
+        <h3>شيبسي</h3>
+        <p class="price">10 جنيه</p>
+        <button class="order-btn" onclick="orderNow('شيبسي')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="./product_tuna.jpg" alt="تونة">
+        <h3>تونة</h3>
+        <p class="price">28 جنيه</p>
+        <button class="order-btn" onclick="orderNow('تونة')">اطلب الآن</button>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- قسم من نحن -->
   <section id="about" class="about">
     <div class="container">
