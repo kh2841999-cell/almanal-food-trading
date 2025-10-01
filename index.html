@@ -1,4 +1,95 @@
 <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مؤسسة المنال</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav">
+    <a href="#home">الرئيسية</a>
+    <a href="#products">المنتجات</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل</a>
+    <a href="checkout.html">الدفع</a>
+    <a href="terms.html">الشروط</a>
+    <a href="privacy.html">الخصوصية</a>
+    <a href="refund.html">الاسترجاع</a>
+    <a href="shipping.html">الشحن</a>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <img src="assets/logo.png" alt="شعار المنال" style="max-height:100px;">
+    <h1>أهلاً بكم في مؤسسة المنال</h1>
+    <p>أفضل المنتجات الغذائية بأفضل الأسعار</p>
+  </header>
+
+  <!-- Products -->
+  <section id="products" class="products">
+    <h2>منتجاتنا</h2>
+
+    <div class="product">
+      <img src="assets/product_rice.jpg" alt="أرز فاخر">
+      <h3>أرز فاخر</h3>
+      <p class="price">85 جنيه</p>
+      <button onclick="orderNow('أرز فاخر')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/product2.jpg" alt="زيت طعام">
+      <h3>زيت طعام</h3>
+      <p class="price">120 جنيه</p>
+      <button onclick="orderNow('زيت طعام')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/product3.jpg" alt="مكرونة">
+      <h3>مكرونة</h3>
+      <p class="price">25 جنيه</p>
+      <button onclick="orderNow('مكرونة')">اطلب الآن</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>من نحن</h2>
+    <p>مؤسسة المنال متخصصة في تجارة وتوزيع المواد الغذائية في مصر.</p>
+    <p><b>العنوان:</b> القاهرة، مصر</p>
+    <p><b>الهاتف:</b> <a href="tel:+201200120688">+20 1200120688</a></p>
+    <p><b>البريد:</b> <a href="mailto:almanalest776@gmail.com">almanalest776@gmail.com</a></p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>عبر الهاتف أو البريد الإلكتروني.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 مؤسسة المنال</p>
+    <ul>
+      <li><a href="terms.html">الشروط والأحكام</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      <li><a href="refund.html">سياسة الاسترجاع</a></li>
+      <li><a href="shipping.html">سياسة الشحن</a></li>
+      <li><a href="checkout.html">الدفع</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    function orderNow(productName) {
+      const phoneNumber = "201200120688"; 
+      const message = `مرحبًا، أريد طلب ${productName}`;
+      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
