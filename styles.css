@@ -69,6 +69,78 @@ header nav a:hover {
 }
 
 .section-head h3 {
+
+/* ===== الأساسيات ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* ===== الهيدر ===== */
+header {
+  background: #ffffff;
+  border-bottom: 2px solid #eee;
+  padding: 10px 0;
+}
+
+header .brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  height: 60px;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #007bff;
+}
+
+/* ===== قسم المنتجات ===== */
+.products {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-head h3 {
   font-size: 28px;
   color: #444;
 }
