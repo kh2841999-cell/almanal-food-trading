@@ -22,7 +22,6 @@
 
   <!-- Hero -->
   <header id="home" class="hero">
-    <img src="assets/logo.png" alt="شعار المنال" style="max-height:100px;">
     <h1>أهلاً بكم في مؤسسة المنال</h1>
     <p>أفضل المنتجات الغذائية بأفضل الأسعار</p>
   </header>
@@ -30,23 +29,20 @@
   <!-- Products -->
   <section id="products" class="products">
     <h2>منتجاتنا</h2>
-
     <div class="product">
-      <img src="assets/product_rice.jpg" alt="أرز فاخر">
+      <img src="./product_rice.jpg" alt="أرز فاخر">
       <h3>أرز فاخر</h3>
       <p class="price">85 جنيه</p>
       <button onclick="orderNow('أرز فاخر')">اطلب الآن</button>
     </div>
-
     <div class="product">
-      <img src="assets/product2.jpg" alt="زيت طعام">
+      <img src="./Product2.jpg" alt="زيت طعام">
       <h3>زيت طعام</h3>
       <p class="price">120 جنيه</p>
       <button onclick="orderNow('زيت طعام')">اطلب الآن</button>
     </div>
-
     <div class="product">
-      <img src="assets/product3.jpg" alt="مكرونة">
+      <img src="./Product3.jpg" alt="مكرونة">
       <h3>مكرونة</h3>
       <p class="price">25 جنيه</p>
       <button onclick="orderNow('مكرونة')">اطلب الآن</button>
@@ -87,243 +83,5 @@
       window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
     }
   </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مؤسسة المنال</title>
-  <meta name="description" content="إدارة المواد الغذائية - توريد بالجملة للمحلات والسوبرماركت، تواصل لطلب عروض أسعار.">
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <!-- البانر -->
-  <header style="display: flex; justify-content: flex-end; align-items: center; padding: 10px;">
-    <img src="./logo.jpg" alt="Al Manal Logo" style="height: 60px;">
-  </header>
-
-  <!-- الهيدر -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="./logo.jpg" alt="شعار المؤسسة" class="logo">
-        <div class="brand-text">
-          <h1>مؤسسة المنال</h1>
-          <p>لإدارة المواد الغذائية - AL MANAL FOOD TRADING</p>
-        </div>
-      </div>
-
-      <nav class="nav" aria-label="القائمة الرئيسية">
-        <a href="#home">الصفحة الرئيسية</a>
-        <a href="#products">المنتجات</a>
-        <a href="#about">من نحن</a>
-        <a href="#contact">تواصل</a>
-      </nav>
-
-      <div class="header-actions">
-        <a class="cta" href="mailto:almanalest776@gmail.com?subject=طلب%20عرض%20سعر">طلب عرض سعر</a>
-        <a class="whatsapp" href="https://wa.me/201200120688?text=طلب%20عرض%20سعر%20للمحل">واتساب</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- قسم المنتجات -->
-<section id="products" class="products">
-  <div class="container">
-    <div class="section-head">
-      <h3>منتجاتنا</h3>
-      <p>تشكيلة واسعة من المنتجات الغذائية بالجملة.</p>
-    </div>
-
-    <div class="grid">
-      <!-- أول صف -->
-      <div class="card">
-        <img src="./product1.jpeg" alt="مسحوق غسيل">
-        <h3>مسحوق غسيل</h3>
-        <p class="price">25 جنيه</p>
-        <button class="order-btn" onclick="orderNow('مسحوق غسيل')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product2.jpg" alt="شاي كرك">
-      </h3>شاي كرك</h3>
-        <p class="price">85 جنيه</p>
-        <button class="order-btn" onclick="orderNow('شاي كرك')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product3.jpg" alt="حليب نانا">
-        <h3>حليب نانا</h3>
-        <p class="price">12 جنيه</p>
-        <button class="order-btn" onclick="orderNow('حليب نانا')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product4.jpeg" alt="عدس">
-        <h3>عدس</h3>
-        <p class="price">35 جنيه</p>
-        <button class="order-btn" onclick="orderNow('عدس')">اطلب الآن</button>
-      </div>
-
-      <!-- الصف الثاني -->
-      <div class="card">
-        <img src="./Product5.jpeg" alt="تونه دولفين">
-        <h3>تونه دولفين</h3>
-        <p class="price">28 جنيه</p>
-        <button class="order-btn" onclick="orderNow('تونه دولفين')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product6.jpeg" alt="منتجات البان وعصائر">
-        <h3>منتجات البان وعصائر </h3>
-        <p class="price">20 جنيه</p>
-        <button class="order-btn" onclick="orderNow('منتجات البان وعصائر ')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product7.jpeg" alt="تشكيله مؤسسه المنال">
-        <h3>تشكيله مؤسسه المنال </h3>
-        <p class="price">10 جنيه</p>
-        <button class="order-btn" onclick="orderNow('تشكيله مؤسسه المنال ')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product8.jpeg" alt="بقوليات ">
-        <h3>بقوليات</h3>
-        <p class="price">15 جنيه</p>
-        <button class="order-btn" onclick="orderNow('بقوليات')">اطلب الآن</button>
-      </div>
-
-      <!-- الصف الثالث -->
-      <div class="card">
-        <img src="./Product9.jpeg" alt="شاي">
-        <h3>شاي</h3>
-        <p class="price">40 جنيه</p>
-        <button class="order-btn" onclick="orderNow('شاي')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product10.jpeg" alt="عصائر فريش">
-        <h3>عصائر فريش</h3>
-        <p class="price">55 جنيه</p>
-        <button class="order-btn" onclick="orderNow('عصائر فريش')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product11.jpeg" alt="مسحوق غسيل">
-        <h3>مسحوق غسيل </h3>
-        <p class="price">60 جنيه</p>
-        <button class="order-btn" onclick="orderNow('مسحوق غسيل')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product12.jpeg" alt="مشروبات غازيه">
-        <h3>مشروبات غازيه</h3>
-        <p class="price">25 جنيه</p>
-        <button class="order-btn" onclick="orderNow('مشروبات غازيه')">اطلب الآن</button>
-      </div>
-
-      <!-- الصف الرابع -->
-      <div class="card">
-        <img src="./Product13.jpeg" alt="برسيل">
-        <h3>برسيل </h3>
-        <p class="price">35 جنيه</p>
-        <button class="order-btn" onclick="orderNow('برسيل')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./Product14.png" alt="زيت طعام ومكرونه">
-        <h3>زيت طعام ومكرونه</h3>
-        <p class="price">45 جنيه</p>
-        <button class="order-btn" onclick="orderNow('زيت طعام ومكرونه')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./product_rice.jpg" alt="أرز">
-        <h3>أرز</h3>
-        <p class="price">30 جنيه</p>
-        <button class="order-btn" onclick="orderNow('أرز')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./product_oil.jpg" alt="زيت خليط">
-        <h3>زيت خليط</h3>
-        <p class="price">95 جنيه</p>
-        <button class="order-btn" onclick="orderNow('زيت خليط')">اطلب الآن</button>
-      </div>
-
-      <!-- الصف الخامس -->
-      <div class="card">
-        <img src="./product_cola.jpg" alt="مشروب غازي">
-        <h3>مشروب غازي</h3>
-        <p class="price">15 جنيه</p>
-        <button class="order-btn" onclick="orderNow('مشروب غازي')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./product_lays.jpg" alt="شيبسي">
-        <h3>شيبسي</h3>
-        <p class="price">10 جنيه</p>
-        <button class="order-btn" onclick="orderNow('شيبسي')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="./product_tuna.jpg" alt="تونة">
-        <h3>تونة</h3>
-        <p class="price">28 جنيه</p>
-        <button class="order-btn" onclick="orderNow('تونة')">اطلب الآن</button>
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- قسم من نحن -->
-  <section id="about" class="about">
-    <div class="container">
-      <h3>من نحن</h3>
-      <p>
-        متخصصة في توزيع المواد الغذائية محلياً، لدينا خبرة في التعامل مع سلاسل التوريد وتقديم عروض تنافسية للمشترين بالجملة.
-      </p>
-    </div>
-  </section>
-
-  <!-- قسم تواصل معنا -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h3>تواصل معنا</h3>
-      <div class="contact-grid">
-        <form id="contactForm" onsubmit="submitForm(event)">
-          <label>الاسم</label>
-          <input type="text" id="name" required>
-          <label>الهاتف أو البريد</label>
-          <input type="text" id="phone" required>
-          <label>المنتج</label>
-          <input type="text" id="subject">
-          <label>رسالتك</label>
-          <textarea id="message" rows="4" required></textarea>
-          <button type="submit">إرسال عبر البريد</button>
-          <button type="button" onclick="sendWhatsApp()">إرسال عبر واتساب</button>
-        </form>
-
-        <div class="contact-info">
-          <h4>معلومات التواصل</h4>
-          <p>الهاتف: <a href="tel:+201200120688">+20 1200120688</a></p>
-          <p>البريد: <a href="mailto:almanalest776@gmail.com">almanalest776@gmail.com</a></p>
-          <h4>ساعات العمل</h4>
-          <p>الاثنين - السبت: 9 صباحاً - 6 مساءً</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- الفوتر -->
-  <footer class="site-footer">
-    <p>جميع الحقوق محفوظة © مؤسسة المنال 2025</p>
-  </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>
