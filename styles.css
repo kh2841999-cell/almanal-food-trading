@@ -1,161 +1,473 @@
-/* reset بسيط */
+/* ===== الأساسيات ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Tahoma", sans-serif;
+  font-family: "Cairo", Arial, sans-serif;
 }
 
 body {
-  background: #fff;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
   direction: rtl;
 }
 
-/* الهيدر */
-.site-header {
-  background: #00796B;
-  color: #fff;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+h1, h2, h3 {
+  color: #222;
 }
 
-.site-header .brand {
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* ===== الهيدر ===== */
+header {
+  background: #ffffff;
+  border-bottom: 2px solid #eee;
+  padding: 10px 0;
+}
+
+header .brand {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  height: 60px;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #007bff;
+}
+
+/* ===== قسم المنتجات ===== */
+.products {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-head h3 {
+  font-size: 28px;
+  color: #444;
+}
+
+.section-head p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* شبكة المنتجات */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* بطاقة المنتج */
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* زرار الطلب */
+.order-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #0056b3;
+}
+
+/* ===== قسم التواصل ===== */
+.contact {
+  background: #f8f9fa;
+  padding: 40px 0;
+}
+
+.contact h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact button {
+  background: #28a745;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background: #218838;
+}
+
+/* ===== الفوتر ===== */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ===== تصميم متجاوب ===== */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+}}
+
+.nav a:hover {
+  color: #d89c2b;
+}
+
+.header-actions {
+  display: flex;
   gap: 10px;
 }
 
-.site-header .brand img {
-  height: 50px;
-}
-
-.site-header nav a {
-  margin-left: 15px;
+.cta {
+  background: #e63946;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
   text-decoration: none;
-  color: #fff;
-  font-weight: bold;
   transition: 0.3s;
 }
 
-.site-header nav a:hover {
-  color: #FFD54F;
+.cta:hover {
+  background: #b02a37;
 }
 
-/* البطل */
-.hero {
-  background: #f7f7f7;
-  padding: 50px 20px;
-  text-align: center;
+.whatsapp {
+  background: #28a745;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.hero h2 {
+.whatsapp:hover {
+  background: #218838;
+}
+
+/* ===== قسم المنتجات ===== */
+.products {
+  padding: 40px 0;
+}
+
+.section-head h3 {
   font-size: 26px;
+  text-align: center;
+  color: #5d3a00;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
-.hero p {
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #5d3a00;
+}
+
+.price {
+  font-size: 16px;
+  color: #d89c2b;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.order-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.order-btn:hover {
+  background: #218838;
+}
+
+/* ===== قسم من نحن ===== */
+.about {
+  background: #fff;
+  padding: 40px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 24px;
+  color: #5d3a00;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 16px;
   color: #555;
+}
+
+/* ===== قسم التواصل ===== */
+.contact {
+  background: #faf7f2;
+  padding: 40px 0;
+}
+
+.contact h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #5d3a00;
   margin-bottom: 20px;
 }
 
-/* المنتجات */
-.products {
-  padding: 40px 20px;
-  background: #fafafa;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
 }
 
-.products h3 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 24px;
-  color: #00796B;
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.products .card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.products .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.products .card img {
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.products .card h3 {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.products .price {
-  color: #00796B;
+.contact form label {
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #333;
 }
 
-.products button {
-  background: #00796B;
-  color: #fff;
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contact form button {
+  background: #5d3a00;
+  color: white;
+  padding: 10px;
   border: none;
-  padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.products button:hover {
-  background: #004D40;
+.contact form button:hover {
+  background: #7b4f12;
 }
 
-/* قسم من نحن */
-.about {
-  padding: 30px 20px;
-  text-align: center;
+.contact-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.about h3 {
+.contact-info h4 {
   margin-bottom: 10px;
-  color: #00796B;
+  color: #5d3a00;
 }
 
-/* قسم تواصل */
-.contact {
-  padding: 30px 20px;
-  background: #f7f7f7;
-}
-
-.contact h3 {
-  margin-bottom: 10px;
-  color: #00796B;
-}
-
-.contact a {
-  color: #00796B;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* الفوتر */
-.site-footer {
-  background: #00796B;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
+.contact-info p {
   font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* ===== الفوتر ===== */
+.site-footer {
+  background: #5d3a00;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-small {
+  width: 50px;
+  margin-left: 10px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right p {
+  margin-bottom: 5px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #d89c2b;
+}
+
+/* ===== متجاوب للموبايل ===== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 130px;
+  }
 }
