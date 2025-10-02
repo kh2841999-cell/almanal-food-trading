@@ -1,202 +1,138 @@
-/* Reset بسيط */
-* {
+/* تنسيق أساسي */
+body {
+  font-family: "Cairo", Arial, sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Cairo", Arial, sans-serif;
-}
-
-body {
-  background: #fafafa;
+  line-height: 1.8;
   color: #333;
-  line-height: 1.6;
-  direction: rtl;
 }
 
 /* الهيدر */
-.site-header {
-  background: #00695c;
-  color: #fff;
-  padding: 15px 20px;
+header {
+  background: #0d6efd;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
-
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+header h1 {
+  margin: 0;
+  font-size: 28px;
 }
-
-.site-header .brand {
-  display: flex;
-  align-items: center;
+nav {
+  margin-top: 10px;
 }
-
-.site-header .brand img {
-  height: 60px;
-  margin-left: 15px;
-  border-radius: 10px;
-}
-
-.site-header .brand-text h1 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.site-header nav a {
-  color: #fff;
+nav a {
+  color: white;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
-
-.site-header nav a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
-.header-actions a {
-  background: #fff;
-  color: #00695c;
-  padding: 8px 12px;
-  margin: 0 5px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+/* أقسام الصفحة */
+section {
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-.header-actions a:hover {
-  background: #e0f2f1;
-}
-
-/* القسم الرئيسي */
-.hero {
-  background: url("assets/bg.jpg") center/cover no-repeat;
-  padding: 60px 20px;
-  text-align: center;
-  color: #fff;
-}
-
-.hero h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.hero p {
+section h2, section h3 {
+  color: #0d6efd;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-.hero .btn {
-  background: #ffb300;
-  padding: 10px 18px;
-  border-radius: 6px;
-  margin: 5px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.hero .btn:hover {
-  background: #ffa000;
-}
-
 /* المنتجات */
-.products .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+.products .product-list {
+  display: flex;
   gap: 20px;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.card {
+.products .card {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 12px;
+  width: 250px;
   padding: 15px;
   text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
-
-.card:hover {
-  transform: scale(1.03);
+.products .card:hover {
+  transform: scale(1.05);
 }
-
-.card img {
+.products img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
-
-.card h3 {
+.products .price {
   font-size: 18px;
-  margin: 10px 0;
-}
-
-.card .price {
+  color: #28a745;
   font-weight: bold;
-  color: #00695c;
-  margin-bottom: 10px;
 }
-
-.order-btn {
-  background: #00695c;
-  color: #fff;
-  padding: 8px 12px;
+.products button {
+  background: #0d6efd;
   border: none;
-  border-radius: 6px;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background 0.3s;
+}
+.products button:hover {
+  background: #0b5ed7;
 }
 
-.order-btn:hover {
-  background: #004d40;
-}
-
-/* الفورم */
-.contact form {
+/* نموذج الدفع */
+.checkout form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
-
-.contact input,
-.contact textarea {
-  padding: 8px;
+.checkout input, 
+.checkout select, 
+.checkout textarea {
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 16px;
   width: 100%;
 }
-
-.contact button {
-  background: #00695c;
-  color: #fff;
-  padding: 10px;
+.checkout button {
+  background: #28a745;
+  color: white;
   border: none;
-  border-radius: 6px;
+  padding: 14px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
 }
-
-.contact button:hover {
-  background: #004d40;
+.checkout button:hover {
+  background: #218838;
 }
 
 /* الفوتر */
-.site-footer {
-  background: #333;
-  color: #fff;
-  padding: 20px;
+footer {
   text-align: center;
-  margin-top: 30px;
+  padding: 20px;
+  background: #0d6efd;
+  color: white;
 }
-
-.site-footer a {
-  color: #ffb300;
+footer a {
+  color: #ffc107;
   text-decoration: none;
-  margin: 0 5px;
 }
-
-.site-footer a:hover {
+footer a:hover {
   text-decoration: underline;
 }
