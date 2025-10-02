@@ -102,23 +102,43 @@
   </div>
 
   <script>
-    document.getElementById("checkout-form").addEventListener("submit", function(e){
-      e.preventDefault();
-      let paymentMethod = document.querySelector("input[name='payment']:checked").value;
+document.getElementById("checkout-form").addEventListener("submit", function(e){
+  e.preventDefault();
+  let paymentMethod = document.querySelector("input[name='payment']:checked");
 
-      // هنا هنوجّه المستخدم حسب طريقة الدفع اللي اختارها
-      if(paymentMethod === "visa"){
-        window.location.href = "https://accept.paymob.com/standalone/?ref=your_integration_id"; // رابط Paymob
-      } 
-      else if(paymentMethod === "vodafone"){
-        alert("سيتم الدفع عبر فودافون كاش - تواصل مع خدمة العملاء لتأكيد الطلب.");
-      }
-      else if(paymentMethod === "fawry"){
-        alert("سيتم إنشاء كود فوري - تواصل مع خدمة العملاء.");
-      }
-      else if(paymentMethod === "paypal"){
-        window.location.href = "https://www.paypal.com/ncp/payment"; // رابط PayPal
-      }
+  if(!paymentMethod){
+    alert("من فضلك اختر وسيلة الدفع أولاً");
+    return;
+  }
+
+  let method = paymentMethod.value;
+
+  // ✅ هنا بنحدد حسب الوسيلة
+  if(method === "visa"){
+    // مؤقتًا بيحوّلك للصفحة دي
+    window.location.href = "success.html";
+    // بعدين تربط Paymob هنا
+    // window.location.href = "https://accept.paymob.com/standalone/?ref=your_integration_id";
+  } 
+  else if(method === "vodafone"){
+    alert("سيتم تأكيد الدفع عبر فودافون كاش - تواصل مع خدمة العملاء لتأكيد الطلب.");
+    window.location.href = "success.html";
+  }
+  else if(method === "fawry"){
+    alert("سيتم إنشاء كود فوري - تواصل مع خدمة العملاء.");
+    window.location.href = "success.html";
+  }
+  else if(method === "paypal"){
+    // مؤقتًا
+    window.location.href = "success.html";
+    // بعدين تربط الحساب الحقيقي
+    // window.location.href = "https://www.paypal.com/ncp/payment";
+  }
+  else {
+    window.location.href = "fail.html";
+  }
+});
+</script>
     });
   </script>
 
