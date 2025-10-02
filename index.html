@@ -9,78 +9,92 @@
 <body>
 
   <!-- الهيدر -->
-  <header class="site-header" style="display:flex;justify-content:space-between;align-items:center;padding:10px;">
+  <header class="site-header">
     <div class="brand">
-      <img src="assets/logo.png" alt="شعار المؤسسة" style="height:60px;">
+      <img src="assets/logo.png" alt="شعار المؤسسة">
       <h1>مؤسسة المنال</h1>
     </div>
     <nav>
       <a href="#home">الرئيسية</a>
       <a href="#products">المنتجات</a>
-      <a href="#about">من نحن</a>
+      <a href="#about">عن المؤسسة</a>
+      <a href="#policies">السياسات</a>
       <a href="#contact">تواصل</a>
     </nav>
   </header>
 
-  <!-- الصفحة الرئيسية -->
+  <!-- الرئيسية -->
   <section id="home" class="hero">
-    <div class="hero-inner" style="text-align:center;padding:30px;">
-      <h2>أفضل تشكيلة من المواد الغذائية بالجملة</h2>
-      <p>توريد المواد التموينية، السناكس، المعلبات والمشروبات للمحلات والسوبرماركت.</p>
-      <img src="assets/logo.png" alt="لوغو المؤسسة" style="height:120px;margin-top:15px;">
-    </div>
+    <h2>أفضل تشكيلة من المواد الغذائية بالجملة</h2>
+    <p>توريد المواد التموينية، السناكس، المعلبات والمشروبات للمحلات والسوبرماركت.</p>
+    <img src="assets/logo.png" alt="لوغو المؤسسة" class="hero-img">
   </section>
 
   <!-- المنتجات -->
-  <section id="products" class="products" style="padding:20px;">
-    <h3 style="text-align:center;">منتجاتنا</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:15px;">
-      
+  <section id="products" class="products">
+    <h3>منتجاتنا</h3>
+    <div class="grid">
       <div class="card">
-        <img src="assets/product1.jpg" alt="منتج 1" style="width:100%;border-radius:10px;">
+        <img src="assets/product1.jpg" alt="منتج 1">
         <h3>مسحوق غسيل</h3>
         <p class="price">25 جنيه</p>
         <button onclick="orderNow('مسحوق غسيل')">اطلب الآن</button>
       </div>
 
       <div class="card">
-        <img src="assets/product2.jpg" alt="منتج 2" style="width:100%;border-radius:10px;">
+        <img src="assets/product2.jpg" alt="منتج 2">
         <h3>زيت طعام</h3>
         <p class="price">85 جنيه</p>
         <button onclick="orderNow('زيت طعام')">اطلب الآن</button>
       </div>
 
       <div class="card">
-        <img src="assets/product3.jpg" alt="منتج 3" style="width:100%;border-radius:10px;">
+        <img src="assets/product3.jpg" alt="منتج 3">
         <h3>مكرونة</h3>
         <p class="price">12 جنيه</p>
         <button onclick="orderNow('مكرونة')">اطلب الآن</button>
       </div>
-
-      <div class="card">
-        <img src="assets/product4.jpg" alt="منتج 4" style="width:100%;border-radius:10px;">
-        <h3>أرز فاخر</h3>
-        <p class="price">30 جنيه</p>
-        <button onclick="orderNow('أرز فاخر')">اطلب الآن</button>
-      </div>
-
-      <div class="card">
-        <img src="assets/product5.jpg" alt="منتج 5" style="width:100%;border-radius:10px;">
-        <h3>مشروب غازي</h3>
-        <p class="price">15 جنيه</p>
-        <button onclick="orderNow('مشروب غازي')">اطلب الآن</button>
-      </div>
     </div>
   </section>
 
-  <!-- من نحن -->
-  <section id="about" class="about" style="padding:20px;">
-    <h3>من نحن</h3>
-    <p>مؤسسة المنال متخصصة في توزيع المواد الغذائية محلياً. لدينا خبرة في التعامل مع سلاسل التوريد وتقديم عروض تنافسية للمشترين بالجملة.</p>
+  <!-- عن المؤسسة -->
+  <section id="about" class="about">
+    <h3>عن المؤسسة</h3>
+    <p>مؤسسة المنال متخصصة في توزيع المواد الغذائية بالجملة في السوق المصري. نضمن الجودة والخدمة المميزة مع أسعار منافسة.</p>
+  </section>
+
+  <!-- السياسات -->
+  <section id="policies" class="policies">
+    <h3>سياسات المؤسسة</h3>
+
+    <article>
+      <h4>📜 الشروط والأحكام</h4>
+      <p>باستخدامك للموقع فأنت توافق على شروط الشراء والدفع الموضحة هنا. نحتفظ بالحق في تعديل الشروط وقتما نرى ذلك مناسباً.</p>
+    </article>
+
+    <article>
+      <h4>🔒 سياسة الخصوصية</h4>
+      <p>نلتزم بالحفاظ على خصوصية بيانات العملاء وعدم مشاركتها مع أي طرف ثالث.</p>
+    </article>
+
+    <article>
+      <h4>💳 سياسة الدفع</h4>
+      <p>نوفر خيارات دفع متعددة: نقداً عند الاستلام، تحويل بنكي، أو عبر المحافظ الإلكترونية.</p>
+    </article>
+
+    <article>
+      <h4>📦 سياسة الشحن</h4>
+      <p>يتم الشحن خلال 2-5 أيام عمل داخل جمهورية مصر العربية.</p>
+    </article>
+
+    <article>
+      <h4>↩️ سياسة الاسترجاع</h4>
+      <p>يمكن استرجاع المنتجات خلال 14 يوم من تاريخ الاستلام بشرط أن تكون بحالتها الأصلية.</p>
+    </article>
   </section>
 
   <!-- تواصل -->
-  <section id="contact" class="contact" style="padding:20px;">
+  <section id="contact" class="contact">
     <h3>تواصل معنا</h3>
     <p>📞 الهاتف: <a href="tel:+201200120688">+20 1200120688</a></p>
     <p>📧 الإيميل: <a href="mailto:almanalest776@gmail.com">almanalest776@gmail.com</a></p>
@@ -88,19 +102,26 @@
   </section>
 
   <!-- الفوتر -->
-  <footer class="site-footer" style="background:#f1f1f1;padding:10px;text-align:center;">
-    <p>© 2025 مؤسسة المنال - جميع الحقوق محفوظة</p>
+  <footer class="site-footer">
+    <div>
+      <p>© 2025 مؤسسة المنال - جميع الحقوق محفوظة</p>
+    </div>
+    <div class="quick-links">
+      <a href="#policies">سياسات</a>
+      <a href="#products">المنتجات</a>
+      <a href="#about">عن المؤسسة</a>
+      <a href="#contact">تواصل</a>
+    </div>
   </footer>
 
   <!-- سكريبت الطلب -->
   <script>
     function orderNow(productName) {
-      const phoneNumber = "201200120688"; // رقم الواتساب بدون +
-      const message = `مرحبًا، أريد طلب منتج: ${productName}`;
+      const phoneNumber = "201200120688"; // رقم واتساب بدون +
+      const message = `🛒 طلب جديد:%0Aالمنتج: ${productName}`;
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     }
   </script>
-
 </body>
 </html>
