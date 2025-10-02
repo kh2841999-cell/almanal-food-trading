@@ -1,149 +1,104 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>مؤسسة المنال - AL MANAL FOOD TRADING</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- الهيدر -->
-  <header>
-    <h1>مؤسسة المنال</h1>
+  <header class="site-header" style="display:flex;justify-content:space-between;align-items:center;padding:10px;">
+    <div class="brand">
+      <img src="assets/logo.png" alt="شعار المؤسسة" style="height:60px;">
+      <h1>مؤسسة المنال</h1>
+    </div>
     <nav>
+      <a href="#home">الرئيسية</a>
       <a href="#products">المنتجات</a>
-      <a href="#checkout">الدفع</a>
-      <a href="#about">عن المؤسسة</a>
-      <a href="#terms">الشروط والأحكام</a>
-      <a href="#privacy">سياسة الخصوصية</a>
-      <a href="#refund">سياسة الاسترجاع</a>
-      <a href="#shipping">سياسة الشحن</a>
+      <a href="#about">من نحن</a>
       <a href="#contact">تواصل</a>
     </nav>
   </header>
 
-  <!-- قسم المنتجات -->
-  <section id="products" class="products">
-    <h2>منتجاتنا</h2>
-    <div class="product-list">
+  <!-- الصفحة الرئيسية -->
+  <section id="home" class="hero">
+    <div class="hero-inner" style="text-align:center;padding:30px;">
+      <h2>أفضل تشكيلة من المواد الغذائية بالجملة</h2>
+      <p>توريد المواد التموينية، السناكس، المعلبات والمشروبات للمحلات والسوبرماركت.</p>
+      <img src="assets/logo.png" alt="لوغو المؤسسة" style="height:120px;margin-top:15px;">
+    </div>
+  </section>
+
+  <!-- المنتجات -->
+  <section id="products" class="products" style="padding:20px;">
+    <h3 style="text-align:center;">منتجاتنا</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:15px;">
+      
       <div class="card">
-        <img src="assets/product1.jpg" alt="منتج 1">
+        <img src="assets/product1.jpg" alt="منتج 1" style="width:100%;border-radius:10px;">
         <h3>مسحوق غسيل</h3>
         <p class="price">25 جنيه</p>
         <button onclick="orderNow('مسحوق غسيل')">اطلب الآن</button>
       </div>
+
       <div class="card">
-        <img src="assets/product2.jpg" alt="منتج 2">
+        <img src="assets/product2.jpg" alt="منتج 2" style="width:100%;border-radius:10px;">
         <h3>زيت طعام</h3>
         <p class="price">85 جنيه</p>
         <button onclick="orderNow('زيت طعام')">اطلب الآن</button>
       </div>
+
       <div class="card">
-        <img src="assets/product3.jpg" alt="منتج 3">
+        <img src="assets/product3.jpg" alt="منتج 3" style="width:100%;border-radius:10px;">
         <h3>مكرونة</h3>
         <p class="price">12 جنيه</p>
         <button onclick="orderNow('مكرونة')">اطلب الآن</button>
       </div>
+
+      <div class="card">
+        <img src="assets/product4.jpg" alt="منتج 4" style="width:100%;border-radius:10px;">
+        <h3>أرز فاخر</h3>
+        <p class="price">30 جنيه</p>
+        <button onclick="orderNow('أرز فاخر')">اطلب الآن</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/product5.jpg" alt="منتج 5" style="width:100%;border-radius:10px;">
+        <h3>مشروب غازي</h3>
+        <p class="price">15 جنيه</p>
+        <button onclick="orderNow('مشروب غازي')">اطلب الآن</button>
+      </div>
     </div>
   </section>
 
-  <!-- قسم الدفع Checkout -->
-  <section id="checkout" class="checkout">
-    <h3>إتمام الطلب</h3>
-    <form id="checkoutForm" onsubmit="sendOrder(event)">
-      <input type="text" placeholder="اكتب اسمك" required>
-      <input type="text" placeholder="اكتب رقم الهاتف" required>
-      <input type="email" placeholder="بريدك الإلكتروني" required>
-      <input type="text" placeholder="اكتب عنوان التوصيل" required>
-      <select>
-        <option value="كاش عند الاستلام">كاش عند الاستلام</option>
-        <option value="بطاقة بنكية">بطاقة بنكية</option>
-        <option value="محفظة فودافون كاش">محفظة فودافون كاش</option>
-      </select>
-      <textarea placeholder="ملاحظات إضافية"></textarea>
-      <button type="submit" class="checkout-btn">إتمام الطلب</button>
-    </form>
+  <!-- من نحن -->
+  <section id="about" class="about" style="padding:20px;">
+    <h3>من نحن</h3>
+    <p>مؤسسة المنال متخصصة في توزيع المواد الغذائية محلياً. لدينا خبرة في التعامل مع سلاسل التوريد وتقديم عروض تنافسية للمشترين بالجملة.</p>
   </section>
 
-  <!-- قسم عن المؤسسة -->
-  <section id="about" class="about">
-    <h3>عن المؤسسة</h3>
-    <p>مؤسسة المنال متخصصة في تجارة المواد الغذائية وتوريدها للمحلات والسوبرماركت في مصر. نلتزم بتقديم منتجات عالية الجودة بأسعار تنافسية.</p>
-  </section>
-
-  <!-- قسم الشروط والأحكام -->
-  <section id="terms" class="terms">
-    <h3>الشروط والأحكام</h3>
-    <p>باستخدامك لهذا الموقع فإنك توافق على الشروط التالية: جميع الأسعار بالجنيه المصري وقد تتغير دون إشعار مسبق. يجب على العميل التأكد من بيانات الطلب قبل تأكيده.</p>
-  </section>
-
-  <!-- قسم سياسة الخصوصية -->
-  <section id="privacy" class="privacy">
-    <h3>سياسة الخصوصية</h3>
-    <p>نحترم خصوصية عملائنا، ويتم استخدام بياناتكم فقط لإتمام الطلبات والتواصل معكم، ولا يتم مشاركتها مع أي طرف ثالث.</p>
-  </section>
-
-  <!-- قسم سياسة الاسترجاع -->
-  <section id="refund" class="refund">
-    <h3>سياسة الاسترجاع</h3>
-    <p>يمكن استرجاع المنتجات خلال 7 أيام من الاستلام في حالة وجود عيب مصنعي أو خطأ في الطلب، مع ضرورة الاحتفاظ بالفاتورة.</p>
-  </section>
-
-  <!-- قسم سياسة الشحن -->
-  <section id="shipping" class="shipping">
-    <h3>سياسة الشحن</h3>
-    <p>نوفر خدمة التوصيل لجميع المحافظات داخل مصر. مدة التوصيل من 2 إلى 5 أيام عمل حسب المنطقة.</p>
-  </section>
-
-  <!-- تواصل معنا -->
-  <section id="contact" class="contact">
+  <!-- تواصل -->
+  <section id="contact" class="contact" style="padding:20px;">
     <h3>تواصل معنا</h3>
-    <p>📍 العنوان: القاهرة، مصر</p>
-    <p>📱 الهاتف: <a href="tel:+201200120688">+20 1200120688</a></p>
-    <p>📧 البريد: <a href="mailto:almanalest776@gmail.com">almanalest776@gmail.com</a></p>
+    <p>📞 الهاتف: <a href="tel:+201200120688">+20 1200120688</a></p>
+    <p>📧 الإيميل: <a href="mailto:almanalest776@gmail.com">almanalest776@gmail.com</a></p>
+    <p>📍 العنوان: القاهرة - مصر</p>
   </section>
 
   <!-- الفوتر -->
-  <footer>
+  <footer class="site-footer" style="background:#f1f1f1;padding:10px;text-align:center;">
     <p>© 2025 مؤسسة المنال - جميع الحقوق محفوظة</p>
-    <p>روابط سريعة: 
-      <a href="#products">المنتجات</a> | 
-      <a href="#checkout">الدفع</a> | 
-      <a href="#terms">الشروط</a> | 
-      <a href="#privacy">الخصوصية</a>
-    </p>
   </footer>
 
-  <!-- الجافاسكريبت -->
+  <!-- سكريبت الطلب -->
   <script>
-    const whatsappNumber = "201200120688"; 
-    const emailAddress = "almanalest776@gmail.com";
-
     function orderNow(productName) {
-      let message = `مرحبًا، أريد طلب منتج: ${productName}`;
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
-    }
-
-    function sendOrder(event) {
-      event.preventDefault();
-      let inputs = document.querySelectorAll("#checkoutForm input, #checkoutForm select, #checkoutForm textarea");
-      let name = inputs[0].value;
-      let phone = inputs[1].value;
-      let email = inputs[2].value;
-      let address = inputs[3].value;
-      let payment = inputs[4].value;
-      let notes = inputs[5].value;
-
-      let message = `🛒 طلب جديد:%0A
-👤 الاسم: ${name}%0A
-📱 الهاتف: ${phone}%0A
-📧 الإيميل: ${email}%0A
-📍 العنوان: ${address}%0A
-💳 طريقة الدفع: ${payment}%0A
-📝 ملاحظات: ${notes}`;
-
-      window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
-      window.location.href = `mailto:${emailAddress}?subject=طلب%20جديد&body=${message}`;
+      const phoneNumber = "201200120688"; // رقم الواتساب بدون +
+      const message = `مرحبًا، أريد طلب منتج: ${productName}`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
     }
   </script>
 
