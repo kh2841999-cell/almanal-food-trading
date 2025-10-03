@@ -102,14 +102,14 @@ body {
 
 /* Hero Section */
 .hero {
+  background-image:url(assets/logo.jpg);
+  background-size:contain;
   text-align: center;
   padding: 80px 20px;
-  background: url('assets/logo-bg.jpg') center/cover no-repeat;
-  color: #fff;
+  background: url('assets/hero-bg.jpg') center/cover no-repeat;
+  color: #0066cc;
   position: relative;
-  height: 100vh; /* يخلي الخلفية تغطي كامل الشاشة */
 }
-
 .hero::after {
   content: "";
   position: absolute;
