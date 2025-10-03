@@ -106,7 +106,7 @@ body {
   background-size:contain;
   text-align: center;
   padding: 80px 20px;
-  background: url('assets/hero-bg.jpg') center/cover no-repeat;
+  background: url('assets/logo.jpg') center/cover no-repeat;
   color: #fff;
   position: relative;
 }
