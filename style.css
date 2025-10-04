@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 30px;
+  background: #f3f3f3;
+}
+
+.welcome {
+  color: #0066cc;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #0066cc;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004c99;
+}
