@@ -1,146 +1,65 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>إتمام الدفع - مؤسسة المنال</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدفع - مؤسسة المنال</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
-      font-family: "Tahoma", sans-serif;
-      background: #f7f7f7;
-      margin: 0;
-      padding: 0;
-    }
-    .checkout-container {
-      max-width: 600px;
-      background: #fff;
-      margin: 50px auto;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #333;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .payment-options {
-      margin: 20px 0;
-    }
-    .payment-options label {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    .payment-options input {
-      margin-left: 10px;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: #28a745;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #218838;
-    }
+    body {font-family: "Cairo", sans-serif; text-align: center; padding: 30px;}
+    h1 {margin-bottom: 10px;}
+    .payment-methods {display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;}
+    .method {border: 1px solid #ddd; border-radius: 15px; padding: 20px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .method img {width: 100px; height: auto; margin-bottom: 10px;}
+    button {background-color: #28a745; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;}
+    button:hover {background-color: #218838;}
   </style>
 </head>
 <body>
+  <h1>طرق الدفع المتاحة</h1>
+  <p>اختر الطريقة المناسبة لإتمام عملية الدفع.</p>
 
-  <div class="checkout-container">
-    <h2>إتمام الدفع</h2>
-    <form action="#" method="post" id="checkout-form">
-      <div class="form-group">
-        <label>الاسم الكامل</label>
-        <input type="text" name="name" required>
-      </div>
+  <div class="payment-methods">
+    <!-- PayPal -->
+    <div class="method">
+      <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal" />
+      <p>الدفع عبر PayPal</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick" />
+        <input type="hidden" name="business" value="almanalest776@gmail.com" />
+        <input type="hidden" name="item_name" value="طلب من مؤسسة المنال" />
+        <input type="hidden" name="amount" value="50" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit">ادفع الآن</button>
+      </form>
+    </div>
 
-      <div class="form-group">
-        <label>البريد الإلكتروني</label>
-        <input type="email" name="email" required>
-      </div>
+    <!-- Stripe -->
+    <div class="method">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" />
+      <p>الدفع بالبطاقة (Visa / MasterCard)</p>
+      <a href="https://buy.stripe.com/test_abcd1234" target="_blank">
+        <button>ادفع عبر Stripe</button>
+      </a>
+    </div>
 
-      <div class="form-group">
-        <label>رقم الهاتف</label>
-        <input type="tel" name="phone" required>
-      </div>
+    <!-- Paymob (مصر) -->
+    <div class="method">
+      <img src="https://accept.paymob.com/static/images/logo.svg" alt="Paymob" />
+      <p>الدفع عبر Paymob (فوري / ميزة)</p>
+      <a href="https://accept.paymob.com/api/acceptance/payment_keys" target="_blank">
+        <button>ادفع عبر Paymob</button>
+      </a>
+    </div>
 
-      <div class="form-group">
-        <label>العنوان</label>
-        <input type="text" name="address" required>
-      </div>
-
-      <div class="payment-options">
-        <label><input type="radio" name="payment" value="visa" required> 💳 دفع بالبطاقة (Visa / MasterCard / Meeza)</label>
-        <label><input type="radio" name="payment" value="vodafone"> 📱 فودافون كاش</label>
-        <label><input type="radio" name="payment" value="fawry"> 🏧 فوري</label>
-        <label><input type="radio" name="payment" value="paypal"> 🌍 PayPal</label>
-      </div>
-
-      <button type="submit" class="btn">إدفع الآن</button>
-    </form>
+    <!-- تحويل واتساب -->
+    <div class="method">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      <p>تحويل يدوي عبر واتساب</p>
+      <button onclick="window.open('https://wa.me/201200120868?text=تفاصيل%20الطلب%20والدفع','_blank')">راسلنا على واتساب</button>
+    </div>
   </div>
 
-  <script>
-document.getElementById("checkout-form").addEventListener("submit", function(e){
-  e.preventDefault();
-  let paymentMethod = document.querySelector("input[name='payment']:checked");
-
-  if(!paymentMethod){
-    alert("من فضلك اختر وسيلة الدفع أولاً");
-    return;
-  }
-
-  let method = paymentMethod.value;
-
-  // ✅ هنا بنحدد حسب الوسيلة
-  if(method === "visa"){
-    // مؤقتًا بيحوّلك للصفحة دي
-    window.location.href = "success.html";
-    // بعدين تربط Paymob هنا
-    // window.location.href = "https://accept.paymob.com/standalone/?ref=your_integration_id";
-  } 
-  else if(method === "vodafone"){
-    alert("سيتم تأكيد الدفع عبر فودافون كاش - تواصل مع خدمة العملاء لتأكيد الطلب.");
-    window.location.href = "success.html";
-  }
-  else if(method === "fawry"){
-    alert("سيتم إنشاء كود فوري - تواصل مع خدمة العملاء.");
-    window.location.href = "success.html";
-  }
-  else if(method === "paypal"){
-    // مؤقتًا
-    window.location.href = "success.html";
-    // بعدين تربط الحساب الحقيقي
-    // window.location.href = "https://www.paypal.com/ncp/payment";
-  }
-  else {
-    window.location.href = "fail.html";
-  }
-});
-</script>
-    });
-  </script>
-
+  <p style="margin-top:40px;"><a href="index.html">⬅ العودة إلى الموقع</a></p>
 </body>
 </html>
