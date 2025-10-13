@@ -1,61 +1,54 @@
-/* Reset defaults */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 body {
-  background-color: #fefefe;
-  color: #333;
-  line-height: 1.6;
+  background-color: #fafafa;
+  color: #222;
   direction: rtl;
+  line-height: 1.7;
 }
 
-/* Header */
+/* ================= Header ================= */
 .site-header {
-  background: linear-gradient(to left, #007bff, #00c6ff);
-  padding: 15px 0;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .site-header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.brand .logo {
+.logo {
   height: 60px;
-  border-radius: 10px;
-  border: 2px solid #fff;
+  border-radius: 8px;
 }
 
 .brand-text h1 {
-  font-size: 26px;
-  font-weight: bold;
-  color: #fff;
+  font-size: 24px;
+  margin-bottom: 4px;
 }
 
 .brand-text p {
-  font-size: 14px;
-  color: #e0f7ff;
+  font-size: 13px;
+  opacity: 0.9;
 }
 
-/* Navigation */
+/* Nav */
 .nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -63,291 +56,195 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 5px;
   transition: 0.3s;
 }
 
 .nav a:hover {
-  background-color: #fff;
-  color: #007bff;
+  color: #ffd700;
 }
 
-/* Header Actions */
+/* CTA buttons */
 .header-actions a {
   text-decoration: none;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.header-actions .cta {
+.cta {
   background-color: #28a745;
   color: #fff;
 }
 
-.header-actions .cta:hover {
-  background-color: #218838;
+.cta:hover {
+  background-color: #1e7e34;
 }
 
-.header-actions .whatsapp {
+.whatsapp {
   background-color: #25d366;
   color: #fff;
 }
 
-.header-actions .whatsapp:hover {
+.whatsapp:hover {
   background-color: #1ebe57;
 }
 
-/* Hero Section */
+/* ================= Hero ================= */
 .hero {
-  background-image:url(assets/logo.jpg);
-  background-size:contain;
+  background: url('./assets/logo.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 300px 60px;
-  background: url('assets/logo.jpg') center/cover no-repeat;
-  color: #fff;
   position: relative;
+  color: #fff;
+  overflow: hidden;
 }
+
 .hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.45);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 1;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 20px;
-  position: relative;
-  z-index: 1;
 }
 
-/* 🎯 قسم المنتجات النهائي - تصميم احترافي ومنسق */
+/* ================= Products ================= */
 .products {
-  padding: 80px 20px;
-  background: linear-gradient(to bottom, #ffffff, #f8faff);
-  overflow: visible;
-  padding-bottom: 60px;
+  background-color: #fff;
+  padding: 70px 20px;
 }
 
-.products .grid {
+.products .section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products .section-head h3 {
+  font-size: 32px;
+  color: #007bff;
+}
+
+.products .section-head p {
+  color: #555;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 25px;
   justify-items: center;
-  align-items: stretch; /* كل الكروت نفس الارتفاع */
 }
 
 .card {
   background-color: #fff;
-  border-radius: 18px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.35s ease;
-  width: 100%;
-  max-width: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: fadeInUp 0.7s ease forwards;
-  height: 100%; /* نفس الارتفاع دائمًا */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
   width: 100%;
   height: 220px;
-  object-fit: contain; /* الصورة كاملة بدون قص */
-  border-radius: 12px;
-  margin-bottom: 12px;
-  transition: transform 0.4s ease;
-  flex-shrink: 0;
-}
-
-.card:hover img {
-  transform: scale(1.05);
+  object-fit: cover;
 }
 
 .card h3 {
-  color: #007bff;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  min-height: 48px; /* يثبت مكان العنوان */
+  font-size: 17px;
+  margin: 12px 0 8px;
+  color: #333;
 }
 
 .card .price {
-  color: #e74c3c;
-  font-size: 17px;
-  margin-bottom: 15px;
+  color: #e63946;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* زر الطلب */
-.card .order-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+/* أزرار الطلب والدفع */
+.card button {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
   border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.card .order-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-/* حركة دخول الكروت */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* موبايل */
-@media (max-width: 600px) {
-  .products {
-    padding: 60px 15px;
-  }
-
-  .card img {
-    height: 160px;
-  }
-
-  .card {
-    max-width: 100%;
-    padding: 15px;
-  }
-
-  .card h3 {
-    font-size: 18px;
-  }
-
-  .card .price {
-    font-size: 16px;
-  }
-
-  .card .order-btn {
-    padding: 8px 16px;
-    font-size: 15px;
-  }
-}
-
-/* Order Buttons with Icons */
-.card .order-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: linear-gradient(to left, #ff7e5f, #feb47b);
-  color: #fff;
-  padding: 10px 18px;
-  border: none;
+  padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.card .order-btn i {
-  font-size: 16px;
-}
-
-/* Hover effect with shine */
-.card .order-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);
-  background-size: 200% auto;
-  animation: shine 1.2s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
-}
-
-/* WhatsApp & Phone icons for quick order */
-.card .quick-order {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.card .quick-order a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  color: #fff;
   transition: 0.3s;
+  width: 80%;
+  margin: 5px auto;
 }
 
-.card .quick-order .whatsapp {
-  background-color: #25d366;
+.card button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00c6ff, #007bff);
 }
 
-.card .quick-order .phone {
-  background-color: #007bff;
+.card a button {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
 }
 
-.card .quick-order a:hover {
-  transform: scale(1.2);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.card a button:hover {
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
 }
 
-/* About Section */
+/* ================= About ================= */
 .about {
-  padding: 60px 20px;
-  background-color: #fff;
+  background: #f8f9fa;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .about h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 28px;
   color: #007bff;
+  margin-bottom: 20px;
 }
 
 .about p {
   max-width: 700px;
-  margin: 0 auto;
+  margin: auto;
   color: #555;
-  font-size: 16px;
 }
 
-/* Contact Section */
+/* ================= Contact ================= */
 .contact {
   padding: 60px 20px;
   background-color: #f1f1f1;
 }
 
-.contact .contact-grid {
+.contact h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -355,231 +252,102 @@ body {
   margin: 0 auto;
 }
 
-.contact form {
+form {
   flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  min-width: 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact form input,
-.contact form textarea {
-  padding: 12px;
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
-.contact form button {
-  padding: 12px;
+form button {
+  width: 100%;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(to left, #007bff, #00c6ff);
-  color: #fff;
+  padding: 12px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.contact form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+form button:hover {
+  transform: scale(1.03);
 }
 
-.contact .contact-info {
+.contact-info {
   flex: 1;
   min-width: 250px;
-  background-color: #fff;
+  background: #fff;
   padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* ================= Footer ================= */
 .site-footer {
   background-color: #222;
-  color: #fff;
-  padding: 30px 20px;
+  color: #eee;
   text-align: center;
-}
-
-.site-footer a {
-  color: #fff;
-  text-decoration: underline;
+  padding: 25px;
+  font-size: 14px;
 }
 
 .site-footer ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-/* Responsive */
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #00c6ff;
+}
+
+/* ================= Responsive ================= */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
-    gap: 15px;
+    text-align: center;
   }
 
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .header-actions {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  .hero h1 {
+    font-size: 28px;
   }
-}
-/* === تعديل تنسيق قسم المنتجات بشكل احترافي === */
-.products {
-  padding: 80px 20px;
-  background: linear-gradient(to bottom, #ffffff, #f8faff);
-}
 
-.products .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 18px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.35s ease;
-  width: 100%;
-  max-width: 280px;
-  position: relative;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  transition: transform 0.4s ease;
-}
-
-.card:hover img {
-  transform: scale(1.07);
-}
-
-.card h3 {
-  color: #007bff;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.card .price {
-  color: #e74c3c;
-  font-size: 17px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-/* زر الطلب */
-.card .order-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.card .order-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-/* حركة دخول الكروت */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .hero p {
+    font-size: 16px;
   }
 }
 
-.card {
-  animation: fadeInUp 0.7s ease forwards;
-}
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
-
-/* تظبيط على الموبايل */
-@media (max-width: 600px) {
   .card img {
-    height: 160px;
+    height: 200px;
   }
-
-  .card {
-    max-width: 100%;
-  }
-}
-/* 🎯 إصلاح مشكلة القص في صور المنتجات وتنسيق الكروت */
-.products .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: start;
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.35s ease;
-  width: 100%;
-  max-width: 280px;
-  overflow: hidden; /* يمنع القص */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  object-fit: contain; /* يمنع القص */
-  border-radius: 10px;
-  margin-bottom: 12px;
-  transition: transform 0.4s ease;
-}
-
-/* حركة لطيفة */
-.card:hover img {
-  transform: scale(1.05);
-}
-
-/* عشان الكروت متتحركش وتثبت في مكانها */
-.products {
-  overflow: visible;
-  padding-bottom: 60px;
 }
