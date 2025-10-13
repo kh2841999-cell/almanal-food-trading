@@ -127,65 +127,76 @@ body {
 }
 
 /* ================= Products ================= */
-.products {
-  background-color: #fff;
-  padding: 70px 20px;
+/* ====== Products Layout ====== */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
 }
 
-.products .section-head {
+.product-card {
+  width: 48%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
   text-align: center;
-  margin-bottom: 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
-.products .section-head h3 {
-  font-size: 32px;
-  color: #007bff;
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-.products .section-head p {
-  color: #555;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.card h3 {
-  font-size: 17px;
-  margin: 12px 0 8px;
-  color: #333;
-}
-
-.card .price {
-  color: #e63946;
-  font-weight: bold;
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
   margin-bottom: 10px;
 }
 
+.product-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: #555;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.product-card a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.product-card a.pay {
+  background-color: #ff7f50;
+}
+
+.product-card a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+  }
+}
 /* أزرار الطلب والدفع */
 .card button {
   background: linear-gradient(90deg, #007bff, #00c6ff);
