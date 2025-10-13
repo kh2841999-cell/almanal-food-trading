@@ -371,3 +371,43 @@ body {
     justify-content: center;
   }
 }
+/* 💫 زر تفعيل الدفع */
+.activate-btn {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  border-radius: 50px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+/* لمعة متحركة على الزر */
+.activate-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+/* عند مرور الماوس */
+.activate-btn:hover::before {
+  left: 130%;
+}
+
+.activate-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+  background: linear-gradient(90deg, #00c6ff, #007bff);
+}
