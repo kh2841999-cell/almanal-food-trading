@@ -476,3 +476,46 @@ body {
     max-width: 100%;
   }
 }
+/* 🎯 إصلاح مشكلة القص في صور المنتجات وتنسيق الكروت */
+.products .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.35s ease;
+  width: 100%;
+  max-width: 280px;
+  overflow: hidden; /* يمنع القص */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* يمنع القص */
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.4s ease;
+}
+
+/* حركة لطيفة */
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* عشان الكروت متتحركش وتثبت في مكانها */
+.products {
+  overflow: visible;
+  padding-bottom: 60px;
+}
