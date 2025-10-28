@@ -111,6 +111,24 @@
         <img src="./assets/product1.jpg" alt="زيت الوسام ٥٠٠جرام ×١٢عبوه">
       </h3>زيت الوسام ٥٠٠جرام×١٢عبوه</h3>
         <p class="price">سعر الكرتون ١٠٠٠ جنيه</p>
+        <label>الكمية:</label>
+<input type="number" id="qty" value="1" min="1">
+<button onclick="payNow('زيت الوسام', 100)">ادفع الآن</button>
+
+<script>
+async function payNow(productName, price) {
+  const qty = document.getElementById('qty').value;
+
+  const res = await fetch('/api/createPayment', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ productName, quantity: Number(qty), price })
+  });
+
+  const data = await res.json();
+  window.open(data.url, '_blank');
+}
+</script>
         <button class="order-btn" onclick="orderNow('زيت الوسام')">اطلب الآن (واتساب)</button>
      <a href="https://paymob.xyz/cfjnusFq/" target="_blank">
   <button>ادفع الآن (paymob)</button>
